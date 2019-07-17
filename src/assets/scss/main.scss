@@ -1,0 +1,15 @@
+// override progress bar
+#nprogress .bar {
+  background: #33ba3a !important;
+  height: 3px !important;
+}
+
+// override ant ui
+.ant-layout {
+  &,
+  &-header,
+  &-footer {
+    background: #fff !important;
+  }
+
+}
