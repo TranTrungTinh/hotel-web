@@ -1,13 +1,11 @@
 <template>
   <section class="default">
     <a-layout>
-      <a-layout-header
-        :style="{ position: 'fixed', zIndex: 10, width: '100%' }"
-      >
-        Header
+      <a-layout-header class="default__head">
+        <the-header />
       </a-layout-header>
-      <a-layout-content :style="{ padding: '0 50px', marginTop: '64px' }">
-        <section class="default__content">
+      <a-layout-content class="default__main">
+        <section class="default__main--content">
           <slot />
         </section>
       </a-layout-content>
@@ -18,14 +16,30 @@
   </section>
 </template>
 <script>
-export default {};
+import { TheHeader } from "@/components/header";
+export default {
+  components: { TheHeader }
+};
 </script>
 <style lang="scss" scoped>
 .default {
-  &__content {
-    min-height: 90vh;
-    background: #fff;
-    padding: 24px;
+  &__head {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    height: auto !important;
+  }
+
+  &__main {
+    margin-top: 130px;
+    padding: 0 30px;
+    border-top: 1px solid #dfded3;
+
+    &--content {
+      min-height: 90vh;
+      background: #fff;
+      padding: 24px;
+    }
   }
 }
 </style>
