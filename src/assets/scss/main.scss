@@ -1,4 +1,10 @@
 // override progress bar
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro' !important;
+}
+
 #nprogress .bar {
   background: #33ba3a !important;
   height: 3px !important;
